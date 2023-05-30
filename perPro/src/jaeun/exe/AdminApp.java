@@ -30,9 +30,9 @@ public class AdminApp {
 				as.getMember();
 			} else if (menuNo == 2) {
 				as.getAdmin();
-			}else if (menuNo == 2) {
+			}else if (menuNo == 3) {
 				selectPro();
-			} else if (menuNo == 3) {
+			} else if (menuNo == 4) {
 				Announs();
 			} else if (menuNo == 9) {
 				tru = false;
