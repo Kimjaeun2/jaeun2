@@ -17,7 +17,7 @@ public class AdminApp {
 	}
 
 	private void menu() {
-		System.out.println("1. 회원정보 관리 | 2. 상품 관리 | 3. 게시판 관리 | 9. 로그아웃");
+		System.out.println("1. 전체 회원 조회 | 2. 개인 회원정보 조회 | 3. 상품 관리 | 4. 게시판 관리 | 9. 로그아웃");
 	}
 
 	private void run() {
@@ -27,8 +27,10 @@ public class AdminApp {
 			int menuNo = Integer.parseInt(sc.nextLine());
 
 			if (menuNo == 1) {
-				as.getAdmin();
+				as.getMember();
 			} else if (menuNo == 2) {
+				as.getAdmin();
+			}else if (menuNo == 2) {
 				selectPro();
 			} else if (menuNo == 3) {
 				Announs();

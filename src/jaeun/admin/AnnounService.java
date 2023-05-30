@@ -15,7 +15,7 @@ public class AnnounService {
 		List<Admin> list = AnnounDAO.getInstance().getAnnoun();
 		for (int i = 0; i < list.size(); i++) {
 			System.out.println("번호    " + "게시글 제목");
-			System.out.println(" " + list.get(i).getAnnounNum() + "     " + list.get(i).getAnnounFirst());
+			System.out.println(" " + list.get(i).getAnnounNum() + "      " + list.get(i).getAnnounFirst());
 			;
 		}
 	}
@@ -47,12 +47,13 @@ public class AnnounService {
 		System.out.println("게시글 번호 선택 > ");
 		int number = Integer.parseInt(sc.nextLine());
 		Admin num = AnnounDAO.getInstance().SerchAnnoun(number);
-
+	
 		System.out.print("게시글 제목 :" + num.getAnnounFirst());
 		System.out.println("		작성자 : " + num.getMemberNick());
 		System.out.println();
 		System.out.println(num.getAnnounLast());
 		System.out.println("작성일 " + num.getAnnountDate());
+		
 		// 댓글 확인
 		System.out.println("1. 댓글확인 | 9. 뒤로가기");
 		int menu = Integer.parseInt(sc.nextLine());

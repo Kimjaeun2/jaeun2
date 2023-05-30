@@ -1,10 +1,28 @@
 package jaeun.admin;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class AdminService {
 	public static Admin adminInfo = null;
 	Scanner sc = new Scanner(System.in);
+	
+	public void getMember() {
+		List<Admin> list = AdminDAO.getInstance().getmember();
+		for (int i = 0; i < list.size(); i++) {
+			System.out.print("이름 : " + list.get(i).getMemberName());
+			System.out.print("   아이디 : " + list.get(i).getMemberId());
+			System.out.println("   닉네임 : " + list.get(i).getMemberNick());
+			
+		}
+		System.out.println("1. 상세 조회| 2. 뒤로가기");
+		int menu =  Integer.parseInt(sc.nextLine());
+		if(menu == 1) {
+			getAdmin();
+		}else if(menu==2) {
+			return;
+		}
+	}
 	
 	//회원 조회
 	public void getAdmin() {

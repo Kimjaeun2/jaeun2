@@ -82,7 +82,7 @@ public class AnnounDAO extends DAO {
 		int result = 0;
 		try {
 			conn();
-			String sql = "INSERT INTO announ values (EMP.NEXTVAL, ?,?,?,?,sysDate)";
+			String sql = "INSERT INTO announ values (free.NEXTVAL, ?,?,?,?,sysDate)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, admin.getMemberId());
 			pstmt.setString(2, admin.getMemberNick());
@@ -132,7 +132,7 @@ public class AnnounDAO extends DAO {
 		int result = 0;
 		try {
 			conn();
-			String sql = "INSERT INTO annsecret values (EMP.NEXTVAL, ?,?,?,?,sysDate)";
+			String sql = "INSERT INTO annsecret values (secret.NEXTVAL, ?,?,?,?,sysDate)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, admin.getMemberId());
 			pstmt.setString(2, admin.getMemberNick());
@@ -289,7 +289,7 @@ public class AnnounDAO extends DAO {
 			int result = 0;
 			try {
 				conn();
-				String sql = "INSERT INTO notice values (EMP.NEXTVAL, ?,?,?,?,sysDate)";
+				String sql = "INSERT INTO notice values (noticef.NEXTVAL, ?,?,?,?,sysDate)";
 				pstmt = conn.prepareStatement(sql);
 				pstmt.setString(1, admin.getMemberId());
 				pstmt.setString(2, admin.getMemberNick());
